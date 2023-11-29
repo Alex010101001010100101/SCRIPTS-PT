@@ -1,4 +1,4 @@
-----------Switches----------
+----------Switch basic config----------
 
 en 
 conf t
@@ -14,7 +14,24 @@ enable password cisco123
 
 -------------------------------
 
-#Router's config
+#Router's basic config (telnet access and ip address)
+
+en 
+conf t
+username admin password cisco123
+enable password cisco123
+line vty 0 4
+login local
+exit
+ipv6 unicast-routing
+in <interface>
+ip add <ip> <subnet>
+ipv6 add <ipv6/prefix>
+no shu
+exit
+
+
+#Full scripts of each device
 
 -----------R0--------------
 
